@@ -1,0 +1,189 @@
+body {
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    color: gray;
+    margin: 0px;
+}
+header{
+    color: black;
+    padding: 1px;
+    height: 9vw;
+    font-size: 1.2vw;
+}
+footer{
+   /* position: fixed;*/
+   height: 2.7vw;
+    bottom: 0px;
+    width: 100%;
+    background-color: black;
+    padding: 1vw;
+    column-count: 2;
+    font-size: 1vw;
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+li{
+    display: inline;
+    margin: 1vw;
+}
+.containter{
+    column-count: 4;
+}
+
+a:hover{
+    background-color: red;
+}
+.imagen-hover:hover{
+    background-color: blue;
+    padding: 5px;
+}
+.contactos{
+    color: black;
+}
+.barra-navegacion{
+    width: 100%;
+    text-align: center;
+    background-color: #04ff0047;
+    color: #fff;
+    height: 2vw;
+    border-radius: 20px;
+    font-size: 1vw;
+}
+.icono{
+    float: left; 
+    width: 8vw; 
+}
+
+.login {
+    text-align: center;
+    background: #00b8ff6b;
+    width: 22%;
+    align-items: center;
+    margin: auto;
+    padding: 1%;
+    margin-top: 2%;
+    border-radius: 20px;
+    color: green;
+}
+.registro {
+    text-align: center;
+    background: #00b8ff6b;
+    width: 22%;
+    align-items: center;
+    margin: auto;
+    padding: 1%;    
+    margin-top: 2%;
+    border-radius: 20px;
+    color: green;
+    
+}
+.photos{
+    width: 27vw;
+    height: 20vw;
+    border-radius: 17px;
+    border: solid;
+    border-color: aquamarine;
+    margin: auto;
+    margin-top: 1vw;
+}
+.modulo-photo{
+    text-align: center; 
+    margin-left: 4vw;
+    display: inline-block;
+}
+.presentacion{
+    height: 420px;
+    width: 50%;
+    display: flex;
+    margin: auto;
+    border-radius: 7px;
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.presentacion .img{
+    width: 50%;
+}
+.presentacion .img img{
+    width: 100%;
+    vertical-align: top;
+}
+.producto-info{
+    width: 50%;
+    border-radius: 0px 7px 10px 7px;
+    background: #fff;
+}
+.producto-texto{
+    width: 100%;
+}
+.producto-texto h1{
+    margin-left: 38px;
+    padding-top: 52px;
+    font-size: 34px;
+    color: #474747;
+}
+.producto-texto h1, .precio-btn{
+    font-family: serif;
+}
+.producto-texto h2{
+    margin: 0px 0px 47px 38px;
+    font-size: 13px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color:#d2d2d2;
+    letter-spacing: .2em;
+}
+.producto-texto p{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 38px;
+    font-family: serif;
+    color: #8d8d8d;
+    line-height: 1.7em;
+}
+.precio-btn{
+    height: 103px;
+    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+}
+.precio-btn a{
+    height: 25px;
+    width: 100px;
+    border-radius: 60px;
+    font-family: sans-serif;
+    text-transform:uppercase;
+    letter-spacing: .2em;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    background: #9cebd5;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .icono{
+        width: 20vw;
+    }
+    header{
+        font-size: 3vw;
+        height: 18vw;
+    }
+    .barra-navegacion{
+        font-size: 3vw;
+        height: 10vw;
+    }
+    .login{
+        width: 80%;
+    }
+}
+
+
+

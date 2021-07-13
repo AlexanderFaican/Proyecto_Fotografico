@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+ <html lang="es">
+     
+    <head>
+        <link rel="stylesheet" href="css/Estilos.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    </head>
+    <script>
+        $(window).load(function(){
+
+            $(function() {
+            $('#file-input').change(function(e) {
+                addImage(e); 
+                });
+
+                function addImage(e){
+                    var file = e.target.files[0],
+                    imageType = /image.*/;
+                
+                    if (!file.type.match(imageType))
+                    return;
+                
+                    var reader = new FileReader();
+                    reader.onload = fileOnload;
+                    reader.readAsDataURL(file);
+                    }
+            
+                function fileOnload(e) {
+                var result=e.target.result;
+                $('#imgSalida').attr("src",result);
+                }
+            });
+        });
+    </script>
+    <body>
+        <header >
+            <img class="icono"  src="imagenes\logo.jpeg" alt="">
+            <h3>Tu estudio Fotógrafico</h3>
+            <p style="margin-top: -1%; font-size: 1.5vw;">Observa la belleza del dia a dia plasmada en una fotografia</p>
+        </header>
+        <div id="nav" class="barra-navegacion">
+            <ul>
+                <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Inicio</a></li>
+                <li><a href="buscar.html"><i class="fa fa-search" aria-hidden="true"></i> Buscar</a></li>
+                <li><a href="nueva.html"><i class="fa fa-plus" aria-hidden="true"></i> Nueva Foto</a></li>
+                <li><a href="favoritos.html"><i class="fa fa-star" aria-hidden="true"></i> Favoritas</a></li>
+                <li><a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                <li><a href="login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                <li><a href="registro.html"><i class="fa fa-address-book-o" aria-hidden="true"></i> Registro</a></li>
+            </ul>
+        </div>
+        <containter>
+            <div class="registro">
+                <h1 style="font-size: 2vw;">NUEVA FOTO</h1>
+                <form>
+                <input style="font-size: 1vw; width: 100%;" type="text" placeholder="Titulo de la Foto" minlength="2" maxlength="20" pattern="/^[A-Za-z0-9]+$/g" required>
+                
+                <textarea style="    width: 100%;" placeholder="Descripcion" required></textarea>
+                <input style="font-size: 1vw; width: 100%;" type="text" placeholder="Etiquetas " required><br>
+                <input name="file-input" id="file-input" type="file" />
+                <br />
+                <img id="imgSalida" width="50%" height="50%" src="" />
+                
+               <br>
+                <button style="font-size: 1vw;" type="submit">Registrar Foto</button>
+                </form>
+            </div>
+        </containter>
+        <footer style="margin-top: 2%; background-color:  #04ff0047;">
+            <div class="contactos">
+                <p style="text-align: center";>Contactos: <a style="color: blue;" href="acerca.html">Roberth Faican</a></p>
+                <p></p>
+            </div>
+            <div class="contactos">
+                <p style="text-align: center;"><a style="color: blue;" href="index.html">Inicio  </a>Copyright 2020</p>
+            </div>
+        </footer>
+    </body>
+</html>
